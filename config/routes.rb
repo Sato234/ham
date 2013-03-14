@@ -1,18 +1,25 @@
-Ham::Application.routes.draw do
-  resources :fun_comments
+Ham::Application.routes.draw do  resources :fun_comments
 
-
+  resources :recipes
+  
   resources :reviews
 
 
   resources :authors
 
 
-  resources :users
+  resources :users do
+    collection do
+      get 'temp'
+    end
+  end
 
 
   resources :books
-
+  
+  
+  #root :to => "home#index"
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

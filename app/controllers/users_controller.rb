@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
@@ -79,5 +81,18 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url }
       format.json { head :no_content }
     end
+  end
+  
+  def temp
+    #@review = Review.new();
+    #@authors = Author.all
+    
+    #@books = Book.find_all_by_publish('技術評論社')
+    #@book = Book.find_by_publish_and_price('技術評論社', 2604) #render 'hello/show'
+    #@books = Book.find([2,5,10])
+    
+    #@books = Book.where(:publish => '技術評論社', :price => 2604).order('published DESC')
+    @books = Book.where(:publish => ['技術評論社', '翔泳社']).order(['publish ASC', 'published ASC'])
+    render 'hello/list'
   end
 end

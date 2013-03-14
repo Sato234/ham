@@ -25,6 +25,7 @@ group :assets do
   gem 'compass-recipes'
   gem 'sassy-buttons'
   gem 'devise'
+
 end
 
 gem 'jquery-rails'
@@ -43,3 +44,5 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem "mocha", :group => :test

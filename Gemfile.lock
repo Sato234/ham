@@ -74,7 +74,10 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.1)
     mime-types (1.21)
+    mocha (0.13.3)
+      metaclass (~> 0.0.1)
     multi_json (1.6.1)
     mysql2 (0.3.11)
     orm_adapter (0.4.0)
@@ -143,6 +146,7 @@ DEPENDENCIES
   compass-recipes
   devise
   jquery-rails
+  mocha
   mysql2
   rails (= 3.2.12)
   sass-rails (~> 3.2.3)
